@@ -1,0 +1,194 @@
+\documentclass{book}
+
+\usepackage{mathpazo}
+%\usepackage{mathptmx}
+%\usepackage{concrete}
+\usepackage{extramarks}
+
+\usepackage{setspace}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{epigraph}
+
+%\usepackage{quotchap}
+%\setbeamertemplate{navigation symbols}{}
+%\usefonttheme[stillsansseriflarge]{serif}
+\usepackage{etoolbox}
+
+
+\newcommand{\enterProblemHeader}[1]{
+    \nobreak\extramarks{}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+}
+
+\newcommand{\exitProblemHeader}[1]{
+    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \stepcounter{#1}
+    \nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
+}
+
+\setcounter{secnumdepth}{0}
+\newcounter{partCounter}
+\newcounter{homeworkProblemCounter}
+\setcounter{homeworkProblemCounter}{1}
+\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+
+\newenvironment{homeworkProblem}{
+    \section{Problem \arabic{homeworkProblemCounter}}
+    \setcounter{partCounter}{1}
+    \enterProblemHeader{homeworkProblemCounter}
+}{
+    \exitProblemHeader{homeworkProblemCounter}
+}
+
+
+\theoremstyle{plain}
+%\newtheorem{thm}{Theorem}[chapter]
+%\newtheorem{prop}[thm]{Proposition}
+%\newtheorem{cor}[thm]{Corollary}
+%\newtheorem{lem}[thm]{Lemma}
+%\newtheorem{prob}[thm]{Problem}
+
+% \epigraphsize{\small}% Default
+\setlength\epigraphwidth{8cm}
+\setlength\epigraphrule{0pt}
+
+\makeatletter
+\patchcmd{\epigraph}{\@epitext{#1}}{\itshape\@epitext{#1}}{}{}
+\makeatother
+
+\newcommand{\thetitle}{So You Think You Can Count}
+\newcommand{\theversion}{1.2.2}
+
+\title{\thetitle}
+\author{Zhaphod Beeblebrox}
+
+%\renewcommand{\@chapapp}{}% Not necessary...
+\newenvironment{chapquote}[2][2em]
+  {\setlength{\@tempdima}{#1}%
+   \def\chapquote@author{#2}%
+   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+   \itshape}
+  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
+\begin{document}
+%\frontmatter
+%\maketitle
+
+%\thispagestyle{empty}
+%\begin{flushright}
+%\vspace*{2.0in}
+%
+%\begin{spacing}{3}
+%{\huge \thetitle}
+%\end{spacing}
+%
+%\vspace{0.25in}
+%
+%Version \theversion
+%
+%\vfill
+%
+%\end{flushright}
+\newcommand{\blankpage}{\thispagestyle{empty} \quad \newpage}
+
+%\clearemptydoublepage
+%\pagebreak
+%\thispagestyle{empty}
+%\vspace*{6in}
+
+%--title page--------------------------------------------------
+\pagebreak
+\thispagestyle{empty}
+
+\begin{flushright}
+\vspace*{2.0in}
+
+\begin{spacing}{3}
+{\huge \thetitle}
+\end{spacing}
+
+\vspace{0.25in}
+
+Version \theversion
+
+\vspace{1in}
+
+
+{\Large
+Zhaphod Beeblebrox\\
+}
+
+
+\vspace{0.5in}
+
+{\Large Megadodo Publication}
+
+{\small Ursa Minor Beta}
+
+%\includegraphics[width=1in]{figs/logo1.eps}
+\vfill
+
+\end{flushright}
+
+\pagebreak
+\begin{center}
+\vspace*{2.0in}
+
+{\Huge $\nu\epsilon$ $\pi\alpha\beta o \rho$}
+\end{center}
+%\blankpage
+%\blankpage
+\frontmatter
+\chapter{Preface}
+\epigraph{``Yes, but you need to learn your maths."\newline\newline
+``I don't need to, really. I already know how to count to a hundred. And I'm sure I'll never need more than a hundred of anything.”}{-- \textup{Lisa Kleypas}, Love in the Afternoon}
+
+Counting is mundane, easy, some thing that no one pays much attention to. Even kids as young as 3 can easily count. 
+You may be wondering why on earth anyone would want to read a book on counting. However, in this mundane task of counting hides the enormous beauty that is hidden in our universe. And I would strive to convince you of the same.
+
+\subsection{Why count?}
+As human beings we learn to count from a very early age.A typical 2 year old will proudly
+count to 10 for the coos and applause of adoring parents.Though many adults readily
+claim ineptitude in mathematics, no one ever owns up to an inability to count. Counting
+is one of our first tools, and it is time to appreciate its full mathematical power.The
+physicist Ernst Mach even went so far as to say "There is no problem in all mathematics
+that cannot besolved by direct counting"
+
+\mainmatter
+\chapter{Introduction}
+%\begin{chapquote}{Lewis Carroll, \textit{Alice in Wonderland}}
+%``Begin at the beginning,'' the King said, gravely, ``and go on till you
+%come to an end; then stop.''
+%\end{chapquote}
+%\begin{savequote}
+%``Begin at the beginning,'' the King said, gravely, ``and go on till you
+%come to an end; then stop.''
+%\qauthor{Lewis Carroll}
+%\end{savequote}
+%\begin{frame}
+%\frametitle{A shaggy dog story in Palatino}
+
+
+\epigraph{``Begin at the beginning," the King said gravely, ``and go on till you come to the end: then stop."}{--- \textup{Lewis Carroll}, Alice in Wonderland}
+
+\epigraph{"We only think when confronted with a problem."}{-- \textup{John Dewey}}
+			
+\begin{homeworkProblem}
+Show that every formula of $\mathcal{L}_P$ has the same number of left parentheses as it has of right parentheses.
+\end{homeworkProblem}
+
+\begin{homeworkProblem}
+Consider the following number
+\begin{quote}
+\begin{center}
+$12345678910111213...202122....979899100$
+\end{center}
+\end{quote}
+
+Find the biggest number that can be formed by removing 100 digits from the above number.
+
+\end{homeworkProblem}
+
+%\end{frame}
+\end{document}
