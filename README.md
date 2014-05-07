@@ -39,4 +39,4 @@ with a given number of ones, any many more.
 TBD
 
 # License
-Copyright (c) 2013-2014 Zhaphod Beeblebrox {The Galactic President}. Licensed under the Apache 2.0 license.
+Copyright (c) 2013-2014 Srinivas Kowtal. Licensed under [the MIT license](http://opensource.org/licenses/MIT).
